@@ -72,7 +72,7 @@
 
   section.install { padding: 8px 0 72px; }
   h2 { font-size: 1.5rem; letter-spacing: -0.015em; margin: 0 0 22px; font-weight: 680; }
-  .platforms { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .platforms { display: grid; grid-template-columns: minmax(0, 640px); gap: 20px; }
   .platform { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 24px 26px 8px; }
   .platform h3 { margin: 0 0 14px; font-size: 1.05rem; font-weight: 650; display: flex; align-items: center; gap: 9px; }
   .platform h3 svg { width: 19px; height: 19px; color: var(--muted); }
@@ -142,17 +142,6 @@
             <small data-t="ks">Une connexion internet est nécessaire pour l'activation.</small></li>
         </ol>
       </div>
-      <div class="platform">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span data-t="cardZip">Version portable</span></h3>
-        <ol>
-          <li><span data-t="p1">Décompressez <code>Cadence-windows.zip</code> où vous voulez. Vous obtenez un dossier <code>Cadence</code>.</span>
-            <small data-t="p1s">Pratique quand l'installation de logiciels n'est pas autorisée sur l'ordinateur.</small></li>
-          <li><span data-t="p2">Lancez <code>Cadence.exe</code> dans ce dossier.</span>
-            <small data-t="w1s">Si Windows affiche « Windows a protégé votre ordinateur », cliquez sur Informations complémentaires, puis Exécuter quand même.</small></li>
-          <li><span data-t="k">Saisissez votre clé de licence.</span>
-            <small data-t="ks">Une connexion internet est nécessaire pour l'activation.</small></li>
-        </ol>
-      </div>
     </div>
   </section>
 </main>
@@ -178,10 +167,7 @@
       w2: "Suivez l'assistant d'installation.",
       w2s: "Aucun droit administrateur n'est nécessaire. Cadence s'ouvre à la fin.",
       k: "Saisissez votre clé de licence.", ks: "Une connexion internet est nécessaire pour l'activation.",
-      cardSetup: "Installateur", cardZip: "Version portable",
-      p1: "Décompressez <code>Cadence-windows.zip</code> où vous voulez. Vous obtenez un dossier <code>Cadence</code>.",
-      p1s: "Pratique quand l'installation de logiciels n'est pas autorisée sur l'ordinateur.",
-      p2: "Lancez <code>Cadence.exe</code> dans ce dossier.",
+      cardSetup: "Installateur",
       setup: "Télécharger pour Windows", zip: "Version portable (.zip)",
       meta: (v, setup, zip) => `Version ${v}. Installateur ${setup} Mo` + (zip ? `, version portable ${zip} Mo` : "") + ".",
       req: "Windows 10 ou 11, 64 bits.",
@@ -197,10 +183,7 @@
       w2: "Follow the setup wizard.",
       w2s: "No administrator rights are needed. Cadence opens when it finishes.",
       k: "Enter your license key.", ks: "Activation needs an internet connection.",
-      cardSetup: "Installer", cardZip: "Portable version",
-      p1: "Extract <code>Cadence-windows.zip</code> anywhere. You get a <code>Cadence</code> folder.",
-      p1s: "Handy when installing software isn't allowed on the computer.",
-      p2: "Run <code>Cadence.exe</code> inside it.",
+      cardSetup: "Installer",
       setup: "Download for Windows", zip: "Portable version (.zip)",
       meta: (v, setup, zip) => `Version ${v}. Installer ${setup} MB` + (zip ? `, portable version ${zip} MB` : "") + ".",
       req: "Windows 10 or 11, 64-bit.",
