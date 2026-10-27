@@ -14,14 +14,14 @@ Build in the `flet` repo, then attach the files to a new release here. Keep thes
 | File | Built with |
 |---|---|
 | `Cadence-Setup.exe` | `build_windows.bat` (PyInstaller, then the Inno Setup script `installer\Cadence.iss`) |
-| `Cadence.dmg` | `./build_mac.sh` on a Mac |
+| `Cadence-windows.zip` | `dist\Cadence` zipped so the archive holds a single `Cadence` folder (portable version) |
 
 ```bash
-gh release create v1.2.0 Cadence-Setup.exe Cadence.dmg -R Hortensia-Agency/cadence-releases --title "Cadence 1.2.0"
+gh release create v1.2.0 Cadence-Setup.exe Cadence-windows.zip -R Hortensia-Agency/cadence-releases --title "Cadence 1.2.0"
 ```
 
-Upload every platform to the same release: the page reads the latest release only, and shows
-"macOS coming soon" when it has no `Cadence.dmg`.
+Upload both files to the same release: the page reads the latest release only, and hides the portable
+button when it has no `Cadence-windows.zip`.
 
 ## Screenshots
 
